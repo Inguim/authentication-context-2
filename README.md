@@ -1,7 +1,7 @@
 # Authentication Context 2
 > Pequeno projeto cujo intuito é entender o funcionamento do useContext para ContextApi (de outra maneira), além do controle de rotas no Reactjs pelo react-router-dom.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eb4f56ea-fd65-42cf-8b53-1ab9634ae3bf/deploy-status)](https://authentication-context-2.netlify.app/login)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb4f56ea-fd65-42cf-8b53-1ab9634ae3bf/deploy-status)](https://authentication-context-2.netlify.app/)
 
 
 ### Features
@@ -20,7 +20,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Como testar
 #### Pelo deploy
-1. Link do deploy [Authentication-Context-2](https://authentication-context-2.netlify.app/login)
+1. Link do deploy [Authentication-Context-2](https://authentication-context-2.netlify.app/)
 2. Cadastre-se no sistema 
 3. Agora basta inserir o suas credênciais
 #### Local
