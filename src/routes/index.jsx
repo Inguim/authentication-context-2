@@ -6,19 +6,21 @@ import Home from "../pages/Home";
 import NoMatch from "../pages/NoMatch";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PublicRoutes from "./PublicRoutes";
 
 const RoutesElements = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route element={<PublicRoutes />}>
+          <Route index path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
         <Route path="/" element={<PrivateRoutes />}>
           <Route index path="" element={<Home />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="*" element={<NoMatch />} />
         </Route>
+        <Route path="*" element={<NoMatch />} />
       </Routes>
     </BrowserRouter>
   );

@@ -15,9 +15,9 @@ const Register = () => {
   const [name, setName] = useState("");
   const history = useNavigate();
 
-  function handleRegister() {
+  async function handleRegister(name, password, email) {
     if (email !== "" || password !== "" || name !== "") {
-      context
+      await context
         .Register({
           email: email,
           password: password,
@@ -54,7 +54,7 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <MessageError>{messageError}</MessageError>
-        <Button backgroundColor="--green" onClick={() => handleRegister()}>
+        <Button backgroundColor="--green" onClick={() => handleRegister(name, password, email)}>
           Cadastrar
         </Button>
       </FakeForm>

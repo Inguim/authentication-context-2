@@ -14,9 +14,9 @@ const Login = () => {
   const [messageError, setMessageError] = useState("");
   const history = useNavigate();
 
-  function handleLogin() {
+  async function handleLogin() {
     if(email !== "" && password !== "") {
-      context.Login({
+      await context.Login({
         email: email,
         password: password,
       }).then(response => {

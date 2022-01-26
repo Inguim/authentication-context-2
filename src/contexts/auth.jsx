@@ -22,20 +22,23 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('@App:user');
     localStorage.removeItem('@App:token');
     setUser(null);
-    setAccount(null);
     setSigned(false);
   }
 
 
   async function Login({ email, password }) {
-    if(account.email === email &&  account.password ===  password) {
+    if(!account) {
+      return "Acredito que você ainda não se cadastrou no sistema 😳";
+    }
+
+    if(account.email === email && account.password ===  password) {
       setUser({
         email: account.email,
         name: account.name
       });
       setSigned(true);
       
-      localStorage.setItem('@App:user', JSON.stringify(account));
+      localStorage.setItem('@App:user', JSON.stringify({ email: account.email, name: account.name }));
       localStorage.setItem('@App:token',  randomString(50));
     } else {
       return "Acho que você errou suas credencias 🙄";
@@ -48,10 +51,10 @@ export const AuthProvider = ({ children }) => {
       password: password,
       name: name
     })
-  } 
-
+  }
+  
   return (
-    <AuthContext.Provider value={{ signed, setSigned, Login, Logout, user, Register }}>
+    <AuthContext.Provider value={{ signed, user, setSigned, Login, Logout, Register }}>
       {children}
     </AuthContext.Provider>
   );
