@@ -23,7 +23,10 @@ const Register = () => {
           password: password,
           name: name,
         })
-        .then(() => history("/"));
+        .then(async () => await context.Login({
+            email: email, password: password
+          }).then(() => history("/"))
+        );
     } else {
       setMessageError("Informe todos os campos no cadastro 🙈")
     }

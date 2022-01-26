@@ -6,7 +6,7 @@ import { Button } from "../../styles/Button";
 import { Content } from "./styles";
 import { ButtonLink } from "../../styles/ButtonLink";
 
-const Home = () => {
+const Welcome = () => {
   const { Logout, user } = useAuth();
   const navigate = useNavigate();
 
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Welcome;

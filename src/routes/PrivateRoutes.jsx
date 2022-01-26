@@ -5,7 +5,7 @@ import { useAuth } from "../contexts/auth";
 
 const PrivateRoutes = () => {
   var { signed } = useAuth();
-  return signed ? <Outlet /> : <Navigate to="/login" />;
+  return signed ? <Outlet /> : <Navigate to="/home/login" />;
 };
 
 export default PrivateRoutes;

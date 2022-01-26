@@ -3,9 +3,9 @@ import { Outlet, Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/auth";
 
 
-const PublicRoutes = () => {
+const NotAssignRoutes = () => {
   var { signed } = useAuth();
   return !signed ? <Outlet /> : <Navigate to="/" />;
 };
 
-export default PublicRoutes;
+export default NotAssignRoutes;

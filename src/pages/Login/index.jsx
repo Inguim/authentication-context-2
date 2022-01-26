@@ -50,7 +50,7 @@ const Login = () => {
         />
         <MessageError>{messageError}</MessageError>
         <Button backgroundColor="--green" onClick={() => handleLogin()}>Login</Button>
-        <Button backgroundColor="--light-blue" onClick={() => history('/register')}>Registre-se</Button>
+        <Button backgroundColor="--light-blue" onClick={() => history('/home/register')}>Registre-se</Button>
       </FakeForm>
     </Container>
   );
