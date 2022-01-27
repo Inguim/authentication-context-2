@@ -4,7 +4,9 @@ import { useAuth } from "../contexts/auth";
 
 
 const PrivateRoutes = () => {
-  var { signed } = useAuth();
+  var { signed, loading } = useAuth();
+  if(loading)
+    return <h1>Carregando...</h1>
   return signed ? <Outlet /> : <Navigate to="/home/login" />;
 };
 
