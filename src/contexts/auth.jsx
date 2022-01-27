@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
       setUser(JSON.parse(storagedUser));
     }
+    setLoading(false);
   }, []);
 
   function Logout() {
